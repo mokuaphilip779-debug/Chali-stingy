@@ -5,8 +5,8 @@
  */
 
 const ai = require('../lib/ai');
-const media = require('../lib/media');
-const { num } = require('../lib/util');
+const media = require('./media');
+const { num } = require('./util');
 
 const PERSONA =
   'You are a helpful WhatsApp assistant. Answer in the language the user writes in. ' +
