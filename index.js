@@ -18,7 +18,7 @@
 
 const config = require('./config');
 const db = require('./db');
-const ai = require('./ai');
+const ai = require('./ai-lib');
 const media = require('./media');
 const util = require('./util');
 const msgLib = require('./msg');
