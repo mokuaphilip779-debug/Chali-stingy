@@ -4,7 +4,7 @@ const express = require('express');
 const crypto = require('crypto');
 const config = require('./config');
 const { users, payments, deleted, verifyPassword } = require('./db');
-const wa = require('./wa/manager');
+const wa = require('./manager');
 const pay = require('./payments');
 
 const app = express();
