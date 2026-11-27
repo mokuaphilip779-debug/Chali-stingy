@@ -1,0 +1,24 @@
+{
+  "name": "wa-bot-suite",
+  "version": "3.0.0",
+  "private": true,
+  "description": "Multi-tenant WhatsApp automation bot with 112 commands, group moderation, auto status view, auto react, anti-delete and a monthly subscription paywall. Deployable on Render.",
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "check": "node scripts/check.js"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.7.9",
+    "axios": "^1.7.7",
+    "better-sqlite3": "^11.3.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "pino": "^9.4.0",
+    "qrcode": "^1.5.4"
+  }
+}

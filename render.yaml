@@ -1,0 +1,84 @@
+services:
+  - type: web
+    name: wa-bot-suite
+    runtime: docker
+    plan: starter
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: BASE_URL
+        sync: false
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: ADMIN_TOKEN
+        sync: false
+      - key: DB_PATH
+        value: /var/data/bot.db
+      - key: SESSIONS_DIR
+        value: /var/data/sessions
+      - key: TMP_DIR
+        value: /var/data/tmp
+      - key: OWNER_NUMBER
+        value: "254115417774"
+      - key: OWNER_NAME
+        value: Philo
+      - key: OWNER_EMAIL
+        value: mokuaphilip779@gmail.com
+      - key: BOT_NAME
+        value: BUG BOT
+      - key: BOT_VERSION
+        value: v3
+      - key: BOT_PREFIX
+        value: "."
+      - key: PLAN_DAYS
+        value: "30"
+      - key: PLAN_PRICE_KES
+        value: "100"
+      - key: PLAN_PRICE_USD
+        value: "1"
+      - key: PAYMENT_PROVIDER
+        value: sendmoney
+      - key: MPESA_SEND_MONEY_NUMBER
+        value: "0115417774"
+      - key: MPESA_SEND_MONEY_DISPLAY
+        value: "0115417774"
+      - key: MPESA_SEND_MONEY_NAME
+        value: Philo
+      - key: AI_PROVIDER
+        value: gemini
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        value: gemini-2.0-flash
+      - key: GEMINI_IMAGE_MODEL
+        value: gemini-2.0-flash-preview-image-generation
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: TMDB_API_KEY
+        sync: false
+      - key: MAX_DOWNLOAD_MB
+        value: "64"
+      - key: MPESA_ENV
+        value: sandbox
+      - key: MPESA_CONSUMER_KEY
+        sync: false
+      - key: MPESA_CONSUMER_SECRET
+        sync: false
+      - key: MPESA_SHORTCODE
+        sync: false
+      - key: MPESA_PASSKEY
+        sync: false
+      - key: MPESA_CALLBACK_URL
+        sync: false
+      - key: STRIPE_SECRET_KEY
+        sync: false
+      - key: STRIPE_PRICE_ID
+        sync: false
+      - key: STRIPE_WEBHOOK_SECRET
+        sync: false
+    disk:
+      name: wa-bot-data
+      mountPath: /var/data
+      sizeGB: 1
