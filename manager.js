@@ -22,11 +22,11 @@ const {
   jidNormalizedUser,
 } = require('@whiskeysockets/baileys');
 
-const config = require('../config');
-const { users, deleted, groups, badwords, welcomes } = require('../db');
-const msgLib = require('../lib/msg');
-const { num } = require('../lib/util');
-const commands = require('../commands');
+const config = require('./config');
+const { users, deleted, groups, badwords, welcomes } = require('./db');
+const msgLib = require('./lib/msg');
+const { num } = require('./lib/util');
+const commands = require('./commands');
 
 const logger = pino({ level: process.env.WA_LOG_LEVEL || 'warn' });
 
