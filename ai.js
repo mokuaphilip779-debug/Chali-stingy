@@ -4,7 +4,7 @@
  * AI MENU — 7 commands. All call a real model through lib/ai.js.
  */
 
-const ai = require('../lib/ai');
+const ai = require('./ai-lib');
 const media = require('./media');
 const { num } = require('./util');
 
