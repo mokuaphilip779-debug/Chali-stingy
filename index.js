@@ -16,12 +16,12 @@
  * }
  */
 
-const config = require('../config');
-const db = require('../db');
-const ai = require('../lib/ai');
-const media = require('../lib/media');
-const util = require('../lib/util');
-const msgLib = require('../lib/msg');
+const config = require('./config');
+const db = require('./db');
+const ai = require('./ai');
+const media = require('./media');
+const util = require('./util');
+const msgLib = require('./msg');
 
 const modules = [
   require('./menu'),
